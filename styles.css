@@ -10,7 +10,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    margin: 0;
 }
 
 /* Header Section */
@@ -23,19 +22,16 @@ body {
     position: relative;
 }
 
-.logo {
-    max-width: 150px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.header img {
+    width: 100%; /* Make the logo span the full width */
+    max-width: 100%; /* Ensure the logo does not exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
 }
 
-.header h1 {
-    margin: 10px 0;
-}
-
-.header p {
-    font-size: 1.2em;
+.header h1, .header p {
+    margin: 0;
 }
 
 /* About Section */
