@@ -11,23 +11,37 @@
 </head>
 <body>
 
-    <!-- Header Section with Banner -->
+    <!-- Header Section -->
     <header class="header">
+        <div class="menu-container">
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#styles">Styles</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
         <img src="images/SBUHB_logo.jpg" alt="SBUHB Logo">
         <h1>Welcome to MoveTrak</h1>
         <p>Innovative Sensing Technology to Monitor Movement in Care Homes</p>
-
         <!-- Social Media Links -->
         <div class="social-media">
-            <a href="https://facebook.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/yourpage" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="about">
         <h2>About MoveTrak</h2>
         <p>
             MoveTrak is a cutting-edge distributed sensing technology designed to monitor movement in care homes, reducing the risk of hospitalizations due to pressure ulcers. Our solution uses state-of-the-art sensors to provide real-time data, ensuring the safety and well-being of residents.
@@ -35,7 +49,7 @@
     </section>
 
     <!-- Research and Trials Section -->
-    <section class="research">
+    <section class="research" id="research">
         <h2>Research and Trials</h2>
         <p>
             We are currently conducting trials to validate the effectiveness of MoveTrak in different care home environments. Below are some images from our ongoing research and development.
@@ -48,8 +62,16 @@
         </div>
     </section>
 
+    <!-- Styles Section -->
+    <section class="styles" id="styles">
+        <h2>Our Styles</h2>
+        <p>
+            Information about the various styles or methodologies used in MoveTrak's technology.
+        </p>
+    </section>
+
     <!-- Contact Section with Embedded Microsoft Form -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <p>Please fill out the form below to get in touch with us.</p>
         <!-- Embed Microsoft Form -->
@@ -60,6 +82,8 @@
     <footer class="footer">
         <p>&copy; 2024 MoveTrak. All rights reserved.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 
 </body>
 </html>
