@@ -10,14 +10,16 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    margin: 0;
 }
 
 /* Header Section */
 .header {
+    width: 100%; /* Full width */
     background-color: #008080; /* Teal color for the header */
     color: #fff;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
     position: relative;
 }
 
@@ -29,7 +31,7 @@ body {
 }
 
 .header h1 {
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .header p {
