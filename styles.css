@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
+/* Body Styling */
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Light background color */
 }
 
 /* Header Section */
@@ -18,7 +19,7 @@ body {
     background-color: #008080; /* Teal color for the header */
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 0; /* Zero padding */
     position: relative;
 }
 
@@ -30,84 +31,95 @@ body {
     margin: 0 auto; /* Center the logo horizontally */
 }
 
-.header h1, .header p {
-    margin: 0;
+.header h1 {
+    margin: 10px 0;
+    font-size: 2em;
 }
 
-/* About Section */
-.about {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.header p {
+    margin: 10px 0;
+    font-size: 1.2em;
 }
 
-.about h2 {
-    margin-bottom: 15px;
-}
-
-/* Research and Trials Section */
-.research {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.research-gallery {
+.social-media {
+    margin-top: 10px; /* Adjust as needed */
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
 }
 
-.research-gallery img {
-    width: 30%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.social-icon {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
 }
 
-/* Contact Section */
+.social-icon:hover {
+    color: #00cccc; /* Light teal color on hover */
+}
+
+.social-icon i {
+    transition: color 0.3s;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+/* About, Research, and Styles Section */
+section {
+    padding: 20px;
+    background-color: #fff; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto;
+    max-width: 800px; /* Center the section and constrain its width */
+}
+
+section h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+/* Contact Section Styling */
 .contact {
     padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #e0f7fa; /* Light cyan background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto;
+    max-width: 800px; /* Center the section and constrain its width */
 }
 
-.contact form {
-    display: flex;
-    flex-direction: column;
+.contact h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
 }
 
-.contact input, .contact textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.contact p {
+    margin-bottom: 20px;
 }
 
-.contact button {
-    padding: 10px;
-    background-color: #008080;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.contact button:hover {
-    background-color: #006666;
+.contact iframe {
+    width: 100%; /* Full width of its container */
+    height: 600px; /* Adjust height as needed */
+    border: none; /* Remove border */
 }
 
 /* Footer Section */
 .footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    padding: 10px;
+    background-color: #008080; /* Same teal color as header */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
 }
