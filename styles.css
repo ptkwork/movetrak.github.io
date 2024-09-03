@@ -202,3 +202,40 @@ section p {
         margin: 10px 0;
     }
 }
+
+/* General Link Reset */
+a {
+    text-decoration: none; /* Remove underline from all links */
+    color: inherit; /* Inherit text color from parent */
+}
+
+/* Section Box Styling */
+.section-box {
+    background-color: #f4f4f4; /* Light background for the section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for visual feedback */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 20px 0; /* Spacing between sections */
+    text-align: center; /* Center text */
+    color: #333; /* Dark text color */
+}
+
+/* Hover and Active Feedback */
+.section-link:hover .section-box,
+.section-link:focus .section-box {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.section-link:active .section-box {
+    transform: scale(0.98); /* Slightly shrink on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Revert to original shadow */
+}
+
+/* Specific Section Content Styling */
+.about h2, .about p {
+    margin: 10px 0; /* Adjust spacing */
+}
+
