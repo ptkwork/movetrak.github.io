@@ -175,6 +175,9 @@ section p {
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex; /* Show hamburger menu on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        padding: 10px; /* Added padding for more space */
     }
 
     .navbar {
@@ -182,7 +185,7 @@ section p {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 40px; /* Adjust based on header height */
         background-color: #008080; /* Match the header background color */
     }
 
