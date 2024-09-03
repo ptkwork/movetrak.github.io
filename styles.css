@@ -248,7 +248,7 @@ a {
 }
 
 .research-gallery img {
-    max-width: 100%; /* Scale images to fit the container */
+    max-width: 50%; /* Scale images to fit the container */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: rounded corners for images */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
@@ -258,4 +258,25 @@ a {
 .research-gallery img:hover {
     transform: scale(1.05); /* Slightly enlarge image on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Research Content Section */
+.research-content {
+    padding: 20px;
+    background-color: #fff; /* Optional: White background for better visibility */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+    margin: 20px auto; /* Center the section horizontally */
+    max-width: 800px; /* Limit the width for better readability */
+    text-align: center; /* Center text within the section */
+}
+
+.research-content h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.research-content p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
 }
