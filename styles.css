@@ -349,6 +349,7 @@ a {
     transform: translate(-50%, -50%); /* Center the video */
     object-fit: cover; /* Cover the viewport while maintaining aspect ratio */
     opacity: 0.7; /* Optional: Slight transparency for better readability */
+    pointer-events: none; /* Prevents the video from being clickable */
 }
 
 /* Content Overlay */
