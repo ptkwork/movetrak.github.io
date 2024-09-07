@@ -71,6 +71,7 @@ main {
 section {
     padding: 20px;
     background-color: #fff; /* White background for sections */
+    opacity: 0.95;
     border-radius: 8px; /* Rounded corners */
     margin: 20px auto;
     max-width: 800px; /* Center the section and constrain its width */
