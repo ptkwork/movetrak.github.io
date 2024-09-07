@@ -332,3 +332,38 @@ a {
     cursor: pointer;
 }
 
+
+
+
+
+/* Background Video Styling */
+.background-video {
+    position: fixed; /* Fix the video in the background */
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Ensure it covers the width */
+    min-height: 100%; /* Ensure it covers the height */
+    width: auto;
+    height: auto;
+    z-index: -1; /* Send the video behind the content */
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Cover the viewport while maintaining aspect ratio */
+    opacity: 0.7; /* Optional: Slight transparency for better readability */
+}
+
+/* Content Overlay */
+.content {
+    position: relative; /* Keep content above the video */
+    z-index: 1; /* Ensure content is above the video */
+}
+
+/* Updated Header and Footer Backgrounds for Transparency */
+.header, .footer {
+    background-color: rgba(0, 128, 128, 0.8); /* Semi-transparent teal background */
+}
+  
+/* Updated Research Content Section */
+.research-content {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
