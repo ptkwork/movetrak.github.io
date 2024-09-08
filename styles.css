@@ -457,3 +457,48 @@ a {
     transform: translateY(0); /* Slide into view */
 }
 
+
+
+
+
+
+
+/* Collaborators Section Styling */
+.collaborators {
+    position: relative; /* Needed for positioning the pseudo-element */
+    padding: 20px;
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+.collaborators::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 128, 0.1); /* Teal background with opacity */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+/* Ensure the section-box stays opaque */
+.collaborators .section-box {
+    position: relative; /* Ensure it stays above the pseudo-element */
+    background-color: #fff; /* Solid background for the section-box */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Styling for images in the Collaborators section */
+.collaborators img {
+    width: 80px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px; /* Space between images */
+    display: inline-block; /* Display images side by side */
+}
+
+/* Ensure images are aligned properly and fit the container */
+.collaborators .section-box {
+    text-align: center; /* Center images horizontally */
+}
+
