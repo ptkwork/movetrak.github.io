@@ -1,28 +1,13 @@
+// JavaScript for Hamburger Menu Functionality
 document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
+    const menuToggle = document.getElementById('menu-toggle'); // Select the hamburger menu
+    const navbar = document.getElementById('navbar'); // Select the navbar
 
+    // Add event listener to menu toggle for click event
     menuToggle.addEventListener('click', function () {
-        navbar.classList.toggle('active');
+        // Toggle 'open' class to display or hide the navbar
+        navbar.classList.toggle('open');
+        // Toggle 'active' class to change hamburger icon to a cross and back
+        menuToggle.classList.toggle('active');
     });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const openButton = document.getElementById('open-form');
-    const modal = document.getElementById('form-modal');
-    const closeButton = document.querySelector('.close');
-
-    openButton.onclick = function() {
-        modal.style.display = 'block';
-    }
-
-    closeButton.onclick = function() {
-        modal.style.display = 'none';
-    }
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    }
 });

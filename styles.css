@@ -1,3 +1,23 @@
+/* Styles for index.html */
+.index-page .header,
+.index-page .footer {
+    background-color: rgba(0, 128, 128, 0.3); /* Semi-transparent teal background */
+}
+
+.about-page .footer {
+    background-color: #f9f9f9;
+}
+
+.research-page .footer {
+    background-color: #f9f9f9;
+
+}
+
+.styles-page .footer {
+    background-color: #f9f9f9;
+}
+
+
 /* General Reset */
 * {
     margin: 0;
@@ -361,11 +381,79 @@ a {
 
 /* Updated Header and Footer Backgrounds for Transparency */
 .header, .footer {
-    background-color: rgba(0, 128, 128, 0.8); /* Semi-transparent teal background */
+    background-color: rgba(0, 128, 128, 0.7); /* Semi-transparent teal background */
 }
   
 /* Updated Research Content Section */
 .research-content {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 1); /* Semi-transparent white background */
+}
+
+
+
+
+/* INSERT INSIDE YOUR ORIGINAL CSS FILE */
+
+/* Styles for the Hamburger Menu Toggle */
+.menu-toggle {
+    display: flex; /* Ensure the toggle is visible */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px; /* Some padding for touch-friendliness */
+    transition: transform 0.3s;
+}
+
+.menu-toggle .bar {
+    background-color: #fff; /* Bar color */
+    height: 3px; /* Thickness of the bars */
+    width: 25px; /* Length of the bars */
+    margin: 4px 0; /* Spacing between bars */
+    transition: all 0.3s ease; /* Smooth transition */
+    
+}
+
+
+
+
+/* Updated Cross Positioning */
+.menu-toggle.active .bar1 {
+    transform: rotate(45deg) translateX(9px) translateY(7px); /* Move right by 10px and down by 6px */
+    background-color: #fff;
+}
+
+.menu-toggle.active .bar2 {
+    opacity: 0; /* Middle bar disappears */
+}
+
+.menu-toggle.active .bar3 {
+    transform: rotate(-45deg) translateX(9px) translateY(-7px); /* Move right by 10px and up by 6px */
+    background-color: #fff;
+}
+
+
+
+
+
+
+/* Navbar Visibility Toggled */
+.navbar {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stacked layout when shown */
+    align-items: center; /* Center aligned items */
+    background-color: #008080; /* Background color for navbar */
+    padding: 10px 0; /* Padding around navbar items */
+    position: absolute; /* Positioning it near the toggle */
+    right: 0; /* Aligning it to the right */
+    top: 60px; /* Below the header */
+    width: 100%; /* Full width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensuring visibility */
+    transform: translateY(-100%); /* Start position off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+}
+
+.navbar.open {
+    display: flex; /* Show navbar when active */
+    transform: translateY(0); /* Slide into view */
 }
 
