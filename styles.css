@@ -634,4 +634,15 @@ body {
   .sidebar a:hover {
     color: #00cccc; /* Teal color on hover */
   }
+
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      top: 1rem; /* Adjust this value as needed */
+    }
+  
+    .header {
+      padding-top: calc(var(--hamburger-height) + 1rem); /* Ensures there's space for the hamburger menu */
+    }
+  }
+  
   
