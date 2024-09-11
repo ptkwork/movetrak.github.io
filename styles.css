@@ -409,6 +409,7 @@ a {
     width: 25px; /* Length of the bars */
     margin: 4px 0; /* Spacing between bars */
     transition: all 0.3s ease; /* Smooth transition */
+    transform-origin: center;
     
 }
 
@@ -419,6 +420,7 @@ a {
 .menu-toggle.active .bar1 {
     transform: rotate(45deg) translateX(9px) translateY(7px); /* Move right by 10px and down by 6px */
     background-color: #fff;
+    transform-origin: center center;
 }
 
 .menu-toggle.active .bar2 {
@@ -428,6 +430,7 @@ a {
 .menu-toggle.active .bar3 {
     transform: rotate(-45deg) translateX(9px) translateY(-7px); /* Move right by 10px and up by 6px */
     background-color: #fff;
+    transform-origin: center center;
 }
 
 
@@ -502,3 +505,133 @@ a {
     text-align: center; /* Center images horizontally */
 }
 
+
+
+
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative; /* Ensure that the body is the reference for positioning */
+}
+
+:root {
+  --bar-width: 30px;
+  --bar-height: 4px;
+  --hamburger-gap: 3px;
+  --foreground: #333;
+  --background: white;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --hamburger-color: #00cccc; /* Light teal color on hover */;
+  --sidebar-color: #333; /* Background color of sidebar */
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: fixed; /* Fix hamburger positioning */
+  top: var(--hamburger-margin);
+  left: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground: white;
+  --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--hamburger-color); 
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+  position: fixed; /* Fixed positioning to stay at the top */
+  top: -100%; /* Hide sidebar initially above the viewport */
+  left: 0;
+  width: 100vw; /* Make sidebar span the full width */
+  height: auto; /* Adjust height as needed */
+  transition: translate var(--animation-timing);
+  translate: 0 -100%; /* Slide out by default */
+  padding: 1rem;
+  background-color: var(--sidebar-color);
+  color: var(--background);
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  z-index: 1; /* Ensure it is behind the hamburger menu */
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0; /* Slide sidebar into view */
+  top: 0; /* Reset to default position when checked */
+  background-color: var(--sidebar-color);
+}
+
+/* Links inside the sidebar */
+.sidebar a {
+    color: var(--background); /* Default color of the links */
+    text-decoration: none; /* Remove underline from links */
+    display: inline; /* Make the links inline so they do not expand to full width */
+    padding: 0.5rem 1rem; /* Add padding for better clickable area */
+    margin: 0; /* Remove default margins */
+  }
+  
+  /* Change color of links when hovered */
+  .sidebar a:hover {
+    color: #00cccc; /* Teal color on hover */
+  }
+  
