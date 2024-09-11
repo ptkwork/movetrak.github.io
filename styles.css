@@ -628,6 +628,7 @@ body {
     display: inline; /* Make the links inline so they do not expand to full width */
     padding: 0.5rem 1rem; /* Add padding for better clickable area */
     margin: 0; /* Remove default margins */
+    font-size: 1.25rem;
   }
   
   /* Change color of links when hovered */
