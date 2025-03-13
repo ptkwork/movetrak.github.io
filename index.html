@@ -13,10 +13,17 @@
 <body class="index-page">
 
     <!-- Background Video -->
-    <video class="background-video" autoplay muted loop playsinline>
-        <source src="images/background" type="video/mp4">
+<!--     <video class="background-video" autoplay muted loop playsinline>
+        <source src="images/background_swansea2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
+
+    <video id="background-video" class="background-video" autoplay muted playsinline>
+        <source src="images/background15.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    
+    
 
     <!-- Content Wrapper to Ensure Content Appears Above Video -->
     <div class="content">
@@ -29,12 +36,15 @@
             </label>
             <aside class="sidebar">
               <nav>
-                <div><a href="about.html">About</a></div>
-                <div><a href="research.html">Research</a></div>
-                <div><a href="styles.html">Styles</a></div>
+                <div><a href="about.html">About Us</a></div>
+                <div><a href="team.html">The Team</a></div>
+                <div><a href="background.html">Background</a></div>
+                <div><a href="pupis.html">PUPIS</a></div>
+                <div><a href="publications.html">Publications & Conferences</a></div>
+                <div><a href="research.html">Research & Trials</a></div>
                 <div><a href="#contact">Contact Us</a></div>
               </nav>
-            </aside>  
+            </aside>
           
             <!-- <img src="images/SBUHB_logo.jpg" alt="SBUHB Logo"> -->
             <h1>Welcome to MoveTrak</h1>
@@ -48,7 +58,7 @@
             </div>
         </header>
 
-        <!-- About Section -->
+        <!-- about -->
         <section class="about" id="about">
             <a href="about.html" class="section-link">
                 <div class="section-box">
@@ -60,25 +70,86 @@
             </a>
         </section>
 
+
+        <!-- Welcome to the team -->
+        <section class="team" id="team">
+            <a href="team.html" class="section-link">
+                <div class="section-box">
+                    <h2>The Team</h2>
+                    <p>
+                        <b>Dr Mark Bowtell</b> – Principal Clinical Scientist
+                    </p>
+                    <p>
+                        <b>Jennifer Brady</b> – Rehabilitation Engineer
+                    </p>
+                    <p>
+                        <b>Peter Kinder</b> – Trainee Clinical Scientist
+                    </p>
+                    <p>
+                        <b>Dr Andrew Claypole</b> – Pre-Registration HealthCare Scientist 
+                    </p>
+                    <p>
+                        <b>Susan Flavin</b> – Clinical Nurse Specialist
+                    </p>
+                    <p>
+                        <b>Dr Lorna Tasker</b> – Consultant Clinical Scientist
+                    </p>            
+                </div>
+            </a>
+        </section>
+
+        <!-- Background to the project -->
+        <section class="background" id="background">
+            <a href="background.html" class="section-link">
+                <div class="section-box">
+                    <h2>Background</h2>
+                    <p>
+                        The PUPIS team has worked with at-risk individuals in care and home settings for over two decades, identifying opportunities to prevent to prevent pressure ulcers through early intervention.
+                    </p>
+                    <div class="research-gallery">
+                        <!-- Placeholder images - replace with your own images -->
+                        <img src="images/journey.jpg" alt="Research Image 1" style="width: 90%; max-width: 800px; height: auto;">
+                    </div>
+                </div>
+            </a>
+            </section>
+
+        <!-- PUPIS team - linked page-->
+        <section class="pupis" id="pupis">
+            <a href="pupis.html" class="section-link">
+                <div class="section-box">
+                    <h2>PUPIS</h2>
+                    <p>
+
+                    </p>
+                </div>
+            </a>
+        </section>
+
+        <!--Related publications/confereces-->
+        <section class="publications" id="publications">
+            <a href="publications.html" class="section-link">
+                <div class="section-box">
+                    <h2>Related publications & Conferences</h2>
+                </div>
+            </a>
+        </section>
+
+
         <!-- Research and Trials Section -->
         <section class="research" id="research">
             <a href="research.html" class="section-link">
                 <div class="section-box">
                     <h2>Research and Trials</h2>
-                    <p>
-                        We are currently conducting trials to validate the effectiveness of MoveTrak in different care home environments. Below are some images from our ongoing research and development.
-                    </p>
                     <div class="research-gallery">
                         <!-- Placeholder images - replace with your own images -->
                         <img src="images/dev_board.jpg" alt="Research Image 1">
-                        <img src="images/dev_board.jpg" alt="Research Image 2">
-                        <img src="images/dev_board.jpg" alt="Research Image 3">
                     </div>
                 </div>
             </a>
         </section>
 
-        <!-- Styles Section -->
+        <!-- Styles Section
         <section class="styles" id="styles">
             <a href="styles.html" class="section-link">
                 <div class="section-box">
@@ -88,16 +159,21 @@
                     </p>
                 </div>
             </a>
-        </section>
+        </section> -->
 
+        <!--Our Partners-->
         <section class="collaborators" id="collaborators">
           <a href="" class="section-link">
               <div class="section-box">
                 <h2>Our Partners</h2>
-                <div>
+                <!-- <div>
                   <img src="images/cemet.png" alt="Collaborator 1">
                   <img src="images/objectivity.png" alt="Collaborator 2">
                   <img src="images/sbuhb_logo.png" alt="Collaborator 3">
+                </div> -->
+                <div class="research-gallery">
+                    <!-- Placeholder images - replace with your own images -->
+                    <img src="images/colab_infographic.jpg" alt="Research Image 1" style="width: 100%; max-width: 800px; height: auto;">
                 </div>
 
                 <!-- Add more logos as needed -->
@@ -114,6 +190,9 @@
                     <p>
                         You will be redirected to a Microsoft Form.
                     </p>
+                    <h1>Email: SBU.PUPIS@Wales.nhs.uk</h1>
+                    <h1>Telephone: 01792 703609</h1>
+                    <p>Ask for one of the MoveTrak team</p>
                 </div>
             </a>
         </section>
