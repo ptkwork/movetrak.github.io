@@ -527,9 +527,13 @@ a {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  position: relative; /* Ensure that the body is the reference for positioning */
+    margin: 0;
+    padding: 0;
+    position: relative; /* Ensure that the body is the reference for positioning */
+}
+
+.index-page {
+    background-color: #000;
 }
 
 :root {
@@ -672,12 +676,14 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    transition: opacity 0.35s ease-in-out; /* Keep transitions snappy between clips */
+    opacity: 0;
+    transition: opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity;
+    pointer-events: none;
 }
 
-.video-hidden {
-    opacity: 0;
+.background-video.is-visible {
+    opacity: 1;
 }
 
   
